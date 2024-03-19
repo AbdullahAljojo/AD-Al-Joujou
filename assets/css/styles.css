@@ -1806,6 +1806,8 @@ transition: color .4s;
     }
     .about__item:last-child {
         margin-left: 20px;
+        text-align: center; 
+        justify-content: center;
     }
     .about__buttons{
         justify-content: initial;
