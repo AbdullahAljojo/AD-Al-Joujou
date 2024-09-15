@@ -40,35 +40,36 @@ const shadowHeader = () => {
 }
 window.addEventListener('scroll', shadowHeader)
 
-/*================ EMAIL JS ==================*/
-const contactForm = document.getElementById('contact-form'),
-      contactMessage = document.getElementById('contact-message')
+
+// /*================ EMAIL JS ==================*/
+// const contactForm = document.getElementById('contact-form'),
+//       contactMessage = document.getElementById('contact-message')
 
 
-const sendEmail = (e) =>{
-    e.preventDefault()
+// const sendEmail = (e) =>{
+//     e.preventDefault()
 
-    //serviceID - templateID - #form - publickey
-    emailjs.sendForm('service_w0a582k','template_qia32xa','#contact-form','aoyPtdfrkA1QSoMoE')
-    .then(() =>{
-        //Show sent message
-        contactMessage.textContent = 'Message sent successfully ✅'
+//     //serviceID - templateID - #form - publickey
+//     emailjs.sendForm('service_w0a582k','template_qia32xa','#contact-form','aoyPtdfrkA1QSoMoE')
+//     .then(() =>{
+//         //Show sent message
+//         contactMessage.textContent = 'Message sent successfully ✅'
 
-        //Remove message after five seconds
-        setTimeout(() => {
-            contactMessage.textContent = ''
-        }, 5000)
+//         //Remove message after five seconds
+//         setTimeout(() => {
+//             contactMessage.textContent = ''
+//         }, 5000)
 
-        //Clear input fields 
-        contactForm.reset()
+//         //Clear input fields 
+//         contactForm.reset()
 
-    }, ()=>{
-         //Show error message
-         contactMessage.textContent = 'Message not sent (service error) ❌'
-    })
-}
+//     }, ()=>{
+//          //Show error message
+//          contactMessage.textContent = 'Message not sent (service error) ❌'
+//     })
+// }
 
-contactForm.addEventListener('submit', sendEmail)
+// contactForm.addEventListener('submit', sendEmail)
 
 
 /*================ SHOW SCROLL UP ==================*/
