@@ -191,14 +191,10 @@
                     </div>
 
                     <div class="home__info">
-                        <p class="home__description"  id="text">
-                            <b>  <div>
-                    <p id="text"></p>
-                    <div style="text-align: center; ">
-                        <a href="assets/img/cv/abdullahaljoujouCV.pdf" class="download-button">Download CV</a>
-                    </div>
-                  </div></b> 
-                        </p>
+                        <p class="home__description" id="text"></p>
+                        <div style="text-align: center;">
+                            <a href="assets/img/cv/abdullahaljoujouCV.pdf" class="download-button">Download CV</a>
+                        </div>
 
                        <!-- Scroll Down Button -->
                     <a href="#about" class="home__scroll">
@@ -214,14 +210,14 @@
               
                 <script>
                     var texts = [
-                        "  I'am information technology engineer",
-                        "  I'am artificial intelligence specialist",
-                        "  I'am frontend developer"
+                        "I'm an Information Technology Engineer",
+                        "I'm an AI-focused Developer",
+                        "I'm a Full-Stack Developer"
                     ];
                     var count = 0;
-                    var index = 6; // Start index after "I'm"
-                    var currentText = "  I'am ";
-                    var letter = "  I'am ";
+                    var index = 0;
+                    var currentText = "";
+                    var letter = "";
             
                     function type() {
                         if (count === texts.length) {
@@ -246,12 +242,12 @@
                         document.getElementById('text').textContent = letter;
                         document.getElementById('text').textContent += '|';
             
-                        if (index === 7) { // Reset to start after "I'm "
+                        if (index === 0) {
                             setTimeout(function () {
-                                count++; // Increment the count after deleting
-                                index = 6; // Reset the index for the next text
-                                type(); // Call the type function recursively for the next text
-                            }, 500); // Wait for 0.5 seconds before typing the next sentence
+                                count++;
+                                index = 0;
+                                type();
+                            }, 500);
                         } else {
                             setTimeout(deleteText, 60); // Continue deleting if the text is not fully cleared
                         }
@@ -272,7 +268,7 @@
 
                     <div class="about__perfil">
                         <div class="about__image">
-                            <img src="assets/img/about-perfill.jpeg" alt="image" class="about__img">
+                            <img src="assets/img/about-perfill2.jpeg" alt="image" class="about__img">
 
                             <div class="about__shadow"></div>
 
@@ -284,7 +280,7 @@
 
                     <div class="about__info">
                         <p class="about__description">
-                             <b>Abdullah Al Joujou</b>, from the countryside of Damascus, Information technology engineer, specializing in artificial intelligence, Fronend Developer  with 3 years of work experience using various techniques such as Flutter , Dart, React, Vue js, HTML, CSS . . .
+                             <b>Abdullah Al Joujou</b> is an Information Technology Engineer and Full-Stack Developer specializing in mobile and web applications. I build end-to-end products, from interfaces with Flutter, React, and JavaScript to backend services and REST APIs with Laravel and PHP. My experience also includes AI integrations, MySQL, Firebase, and secure digital banking applications.
                         </p>
 
                         <ul class="about__list">
@@ -371,7 +367,6 @@
                             </div>
 
                             <h2 class="services__title">UI / UX Design</h2>
-
                             <p class="services__description">
                                 Beautiful and elegant designs with
                                 interfaces that are intuitive, efficient
@@ -505,6 +500,12 @@
             
                     <div class="skill-container">
                         <div class="skill">Computer Vision</div>
+                        <div class="skill">Full-Stack Development</div>
+                        <div class="skill">Laravel</div>
+                        <div class="skill">PHP</div>
+                        <div class="skill">MySQL</div>
+                        <div class="skill">REST APIs</div>
+                        <div class="skill">Riverpod</div>
                         <div class="skill">MVC - HMVC - MTV</div>
                         <div class="skill">Intelligent search algorithms</div>
                         <div class="skill">Design patterns</div>
@@ -513,7 +514,7 @@
                         <div class="skill">APIs handling</div>
                         <div class="skill">Clean Code</div>
                     </div>
-                </div>
+                </div> 
             </section>
             
              <!--==================== PROJECTS =================-->
@@ -523,8 +524,107 @@
     </h2>
 
     <div class="projects__container container grid">
+
+        <article class="projects__card">
+            <div class="projects__image" style="position: relative;">
+                <img src="assets/img/diypicmain.jpg" alt="DiyGuid app main preview" class="projects__img">
+                <a href="https://apps.apple.com/ae/app/do-it-yourself-guide/id6749245619" target="_blank" class="projects__button button" style="position: absolute; top: 155px; right: 10px; transform: scale(1.3);">
+                    <i class="ri-apple-fill"></i>
+                </a>
+            </div> 
+
+            <div class="projects__content">
+                <h3 class="projects__subtitle">AI-powered repair assistant</h3>
+                <span style="display: inline-block; padding: 6px 10px; border-radius: 999px; background: rgba(58, 127, 255, 0.12); color: hsla(212, 89%, 61%, 0.687); font-size: 12px; font-weight: 600; margin-bottom: 10px;">Mobile</span>
+                <h2 class="projects__title">DiyGuid</h2>
+                <p class="projects__description">
+                    DiyGuid is a smart DIY mobile application that helps users repair damaged household items such as broken chairs, furniture, and everyday objects without needing technical experience. The user can upload or take a photo of the issue, describe the problem, and the app analyzes it using AI to identify the required tools, explain the repair steps, and guide the user through the process smoothly and safely.
+                    <br><br>
+                    After the app shows the problem and the needed repair method, it displays what tools are required. If the user needs a specific part or material, the app can suggest a <strong>Buy</strong> action so they can purchase the required product directly. This makes the experience more practical and complete for real-life repair tasks.
+                    <br><br>
+                    This project was developed using <strong>Flutter</strong> for the mobile app and <strong>Laravel</strong> for the backend, APIs, and data management. It combines AI-powered guidance with a smooth user experience for home repair and DIY support.
+                </p> 
+            </div>
+  
+            <div class="projects__buttons">
+                <a href="https://apps.apple.com/ae/app/do-it-yourself-guide/id6749245619" target="_blank" class="projects__link">
+                    <i class="ri-apple-fill"></i>App Store
+                </a>
+                <a href="assets/img/diypic1.png" target="_blank" class="projects__link">
+                    <i class="ri-image-2-line"></i>Preview 1
+                </a> 
+                <a href="assets/img/diypic2.png" target="_blank" class="projects__link">
+                    <i class="ri-image-2-line"></i>Preview 2
+                </a>
+                <a href="assets/img/diypic3.png" target="_blank" class="projects__link">
+                    <i class="ri-image-2-line"></i>Preview 3
+                </a>
+            </div>
+            <p style="padding-top: 10px; font-size: 14px;">
+                <span style="color: hsla(212, 89%, 61%, 0.687);">#Flutter</span>
+                <span style="color: hsla(0, 0%, 49%, 0.687);"> #Laravel #AI #ChatGPT #DIY #Buy</span>
+            </p>
+        </article>
         
         <article class="projects__card">
+            <div class="projects__image" style="position: relative;">
+                <img src="assets/img/albabsy.jpg" alt="Albab Alsouri landing page UI/UX" class="projects__img">
+                <a href="https://www.figma.com/design/m5o95d0Q1N2ptOSHJr9G5H/Albab-Alsouri-Landing-Page-Design-.?node-id=0-1&t=rVQXZ9fjWCuseHM4-1" target="_blank" class="projects__button button" style="position: absolute; top: 155px; right: 10px; transform: scale(1.3);">
+                    <i class="ri-pencil-ruler-line"></i>
+                </a>
+            </div>
+
+            <div class="projects__content">
+                <h3 class="projects__subtitle">UI/UX Design</h3>
+                <span style="display: inline-block; padding: 6px 10px; border-radius: 999px; background: rgba(58, 127, 255, 0.12); color: hsla(212, 89%, 61%, 0.687); font-size: 12px; font-weight: 600; margin-bottom: 10px;">UI / UX</span>
+                <h2 class="projects__title">AL BAB AL SOURI | الباب السوري</h2>
+                <p class="projects__description">
+                    AL BAB AL SOURI is a logistics landing page and brand experience design focused on shipping, customs clearance, and storage services. The design presents a professional visual identity with organized sections, clear service categories, and a user-friendly flow tailored to customer needs and business credibility.
+                </p>
+            </div>
+
+            <div class="projects__buttons">
+                <a href="https://www.figma.com/design/m5o95d0Q1N2ptOSHJr9G5H/Albab-Alsouri-Landing-Page-Design-.?node-id=0-1&t=rVQXZ9fjWCuseHM4-1" target="_blank" class="projects__link">
+                    <i class="ri-figma-line"></i>Figma Design
+                </a>
+            </div>
+            <p style="padding-top: 10px; font-size: 14px;">
+                <span style="color: hsla(212, 89%, 61%, 0.687);">#UIUX</span>
+                <span style="color: hsla(0, 0%, 49%, 0.687);"> #LandingPage #Logistics #Branding</span>
+            </p>
+        </article>
+
+
+        <article class="projects__card projects__card--bank-app">
+            <div class="projects__image">
+                <img src="assets/img/watanione.jpg" alt="Watani One mobile banking application" class="projects__img">
+            </div>
+
+            <div class="projects__content">
+                <h3 class="projects__subtitle">Digital Banking - National Islamic Bank</h3>
+                <span style="display: inline-block; padding: 6px 10px; border-radius: 999px; background: rgba(58, 127, 255, 0.12); color: hsla(212, 89%, 61%, 0.687); font-size: 12px; font-weight: 600; margin-bottom: 10px;">Mobile</span>
+                <h2 class="projects__title">Watani One</h2>
+                <p class="projects__description">
+                    Watani One is a full-featured Flutter mobile banking app for the National Islamic Bank, built to help customers manage everyday banking securely in Arabic and English. It includes account balances and statements, beneficiary management, local and international transfers, dynamic bill payments, mobile top-ups, card controls, QR account sharing, Firebase notifications, and branded PDF receipts.
+                    <br><br>
+                    The app uses <strong>Riverpod</strong> for state management and dependency injection, <strong>Dio</strong> for API integration, and <strong>GoRouter</strong> for navigation. Its architecture separates reusable core services from banking features, with shared widgets for receipts, dialogs, errors, and offline states.
+                    <br><br>
+                    Security features include biometric quick login, encrypted session storage, certificate pinning, inactivity-based session expiry, secure logout cleanup, and server-driven permissions. Key engineering challenges included distinguishing expired sessions from transfer-password errors, detecting real internet connectivity, rendering Arabic PDF receipts correctly, and generating bill forms dynamically from backend data.
+                </p>
+            </div> 
+
+            <div class="projects__buttons">
+                <a href="https://nib.com.sy" target="_blank" class="projects__link">
+                    <i class="ri-bank-line"></i>National Islamic Bank
+                </a>
+            </div>
+            <p style="padding-top: 10px; font-size: 14px;">
+                <span style="color: hsla(212, 89%, 61%, 0.687);">#Flutter #Riverpod #Dio</span>
+                <span style="color: hsla(0, 0%, 49%, 0.687);"> #GoRouter #Firebase #Banking #Security</span>
+            </p>
+        </article>
+
+        <article class="projects__card projects__card--bank-web">
             <div class="projects__image" style="position: relative;">
                 <img src="assets/img/kyc.png" alt="National Islamic Bank Account Opening" class="projects__img">
                 <a href="https://account.nib.com.sy" class="projects__button button" style="position: absolute; top: 155px; right: 10px; transform: scale(1.3);">
@@ -534,11 +634,12 @@
         
             <div class="projects__content">
                 <h3 class="projects__subtitle">National Islamic Bank</h3>
+                <span style="display: inline-block; padding: 6px 10px; border-radius: 999px; background: rgba(58, 127, 255, 0.12); color: hsla(212, 89%, 61%, 0.687); font-size: 12px; font-weight: 600; margin-bottom: 10px;">Web</span>
                 <h2 class="projects__title">Online Account Opening Platform</h2>
                 <p class="projects__description">
                     This platform allows customers to easily open traditional or digital accounts at the National Islamic Bank. The traditional account offers SMS notifications and QR functionality, while the digital account provides advanced online transaction features. Built using React and JavaScript, the platform ensures security, performance, and a seamless user experience.
                 </p>
-    
+      
             </div>
         
             <div class="projects__buttons">
@@ -563,6 +664,36 @@
         
         <article class="projects__card">
             <div class="projects__image" style="position: relative;">
+                <img src="assets/img/karajiraq.jpg" alt="KarajIraq app" class="projects__img">
+                <a href="#" class="projects__button button" style="position: absolute; top: 155px; right: 10px; transform: scale(1.3);">
+                    <i class="ri-map-pin-user-line"></i>
+                </a>
+            </div>
+
+            <div class="projects__content">
+                <h3 class="projects__subtitle">Flutter App - Iraq</h3>
+                <span style="display: inline-block; padding: 6px 10px; border-radius: 999px; background: rgba(58, 127, 255, 0.12); color: hsla(212, 89%, 61%, 0.687); font-size: 12px; font-weight: 600; margin-bottom: 10px;">Mobile</span>
+                <h2 class="projects__title">KarajIraq</h2>
+                <p class="projects__description">
+                    Worked with Al-Majara Al-Fidiya Company for Artistic Production, Advertising, Training, and Development LLC from 10/05/2024 to 29/02/2025 as a frontend Flutter developer. The project included passenger app, driver app, and admin dashboard, with route tracking, live notifications, and secure payment features including Visa, credit cards, and Apple Pay.
+                    <br><br>
+                    The app was developed with a strong focus on user experience, secure transactions, real-time map tracking, and smooth communication between drivers and passengers. I contributed as a frontend Flutter developer within the team to build the mobile interface and interactive experience.
+                </p>
+            </div>
+
+            <div class="projects__buttons">
+                <a href="#" class="projects__link">
+                    <i class="ri-map-pin-user-line"></i>Project
+                </a>
+            </div>
+            <p style="padding-top: 10px; font-size: 14px;">
+                <span style="color: hsla(212, 89%, 61%, 0.687);">#Flutter</span>
+                <span style="color: hsla(0, 0%, 49%, 0.687);"> #Bloc #Maps #Notifications #Payments</span>
+            </p>
+        </article>
+
+        <article class="projects__card">
+            <div class="projects__image" style="position: relative;">
                 <img src="assets/img/wasena.jpg" alt="image" class="projects__img">
                 <a href="https://play.google.com/store/apps/details?id=com.wasena.app" class="projects__button button" style="position: absolute; top: 155px; right: 10px; transform: scale(1.3);">
                     <i class="ri-google-play-line"></i>
@@ -574,6 +705,7 @@
         
             <div class="projects__content">
                 <h3 class="projects__subtitle">Delivery app</h3>
+                <span style="display: inline-block; padding: 6px 10px; border-radius: 999px; background: rgba(58, 127, 255, 0.12); color: hsla(212, 89%, 61%, 0.687); font-size: 12px; font-weight: 600; margin-bottom: 10px;">Mobile</span>
                 <h2 class="projects__title">Wasena - وصينا</h2>
                 <p class="projects__description">
                     Bringing convenience to the Damascus countryside, Wasena ensures swift and reliable delivery services. Seamlessly order, track, and receive your packages with ease, catering to both residents and businesses alike. Experience prompt delivery solutions tailored to your needs, all at your fingertips. 🚚📦
@@ -618,6 +750,7 @@
 
                         <div class="projects__content">
                             <h3 class="projects__subtitle">project at (PionneNetwork Company)</h3>
+                            <span style="display: inline-block; padding: 6px 10px; border-radius: 999px; background: rgba(58, 127, 255, 0.12); color: hsla(212, 89%, 61%, 0.687); font-size: 12px; font-weight: 600; margin-bottom: 10px;">Mobile</span>
                             <h2 class="projects__title">QuizOn App</h2>
 
                             <p class="projects__description">
@@ -655,6 +788,7 @@
 
                         <div class="projects__content">
                             <h3 class="projects__subtitle">Pioneer clinic reservation</h3>
+                            <span style="display: inline-block; padding: 6px 10px; border-radius: 999px; background: rgba(58, 127, 255, 0.12); color: hsla(212, 89%, 61%, 0.687); font-size: 12px; font-weight: 600; margin-bottom: 10px;">Mobile</span>
                             <h2 class="projects__title">PioneerClinic App</h2>
                         
                         <p class="projects__description">
@@ -686,6 +820,36 @@
                         </p>
                     </article>
 
+                     <article class="projects__card">
+            <div class="projects__image" style="position: relative;">
+                <img src="assets/img/sedrafatima.png" alt="Sedra Fatima booking website" class="projects__img">
+                <a href="https://teal-gorilla-464304.hostingersite.com/Sidra_fatima_user" target="_blank" class="projects__button button" style="position: absolute; top: 155px; right: 10px; transform: scale(1.3);">
+                    <i class="ri-globe-line"></i>
+                </a>
+            </div>
+
+            <div class="projects__content">
+                <h3 class="projects__subtitle">Saudi Arabia - Hall & Chalet Booking</h3>
+                <span style="display: inline-block; padding: 6px 10px; border-radius: 999px; background: rgba(58, 127, 255, 0.12); color: hsla(212, 89%, 61%, 0.687); font-size: 12px; font-weight: 600; margin-bottom: 10px;">Web</span>
+                <h2 class="projects__title">Sedra Fatima | سدرة فاطمة</h2>
+                <p class="projects__description">
+                    Sedra Fatima is a modern booking website that allows users to easily reserve halls and chalets for events with a smooth and memorable experience. The platform is designed to provide intuitive navigation, fast reservation flow, and a comfortable user journey for event planning.
+                    <br><br>
+                    The project was built using <strong>React</strong> and <strong>PHP</strong>, with a focus on reliability and a clean booking experience for users in Saudi Arabia.
+                </p>
+            </div>
+ 
+            <div class="projects__buttons">
+                <a href="https://teal-gorilla-464304.hostingersite.com/Sidra_fatima_user" target="_blank" class="projects__link">
+                    <i class="ri-globe-line"></i>Visit Website
+                </a>
+            </div>
+            <p style="padding-top: 10px; font-size: 14px;">
+                <span style="color: hsla(212, 89%, 61%, 0.687);">#React</span>
+                <span style="color: hsla(0, 0%, 49%, 0.687);"> #PHP #Booking #Events</span>
+            </p>
+        </article>
+        
                     <article class="projects__card">
                         <div class="projects__image" style="position: relative;">
                             <img src="assets/img/weather.jpg" alt="image" class="projects__img">
@@ -693,6 +857,7 @@
 
                         <div class="projects__content">
                             <h3 class="projects__subtitle">Weather app task (Saudi Arabia)</h3>
+                            <span style="display: inline-block; padding: 6px 10px; border-radius: 999px; background: rgba(58, 127, 255, 0.12); color: hsla(212, 89%, 61%, 0.687); font-size: 12px; font-weight: 600; margin-bottom: 10px;">Mobile</span>
                             <h2 class="projects__title">Weather App</h2>
 
                             <p class="projects__description">
@@ -728,6 +893,7 @@
                         <div class="projects__content">
                             <div class="projects__item">
                                 <h3 class="projects__subtitle">project at (Damascus University)</h3>
+                                <span style="display: inline-block; padding: 6px 10px; border-radius: 999px; background: rgba(58, 127, 255, 0.12); color: hsla(212, 89%, 61%, 0.687); font-size: 12px; font-weight: 600; margin-bottom: 10px;">Mobile</span>
                                 <h2 class="projects__title">Colsuntaint Platform App</h2>
                                 <p class="projects__description">
                                     Colsuntaint is an innovative consulting application that caters to both administrators and users. 
@@ -767,6 +933,7 @@
 
                         <div class="projects__content">
                             <h3 class="projects__subtitle">Workshop UI app</h3>
+                            <span style="display: inline-block; padding: 6px 10px; border-radius: 999px; background: rgba(58, 127, 255, 0.12); color: hsla(212, 89%, 61%, 0.687); font-size: 12px; font-weight: 600; margin-bottom: 10px;">Mobile</span>
                             <h2 class="projects__title">FlutterDevo</h2>
 
                             <p class="projects__description">
@@ -802,6 +969,7 @@
                     
                         <div class="projects__content">
                             <h3 class="projects__subtitle"> Intelligent Language Assistant (Python)</h3>
+                            <span style="display: inline-block; padding: 6px 10px; border-radius: 999px; background: rgba(58, 127, 255, 0.12); color: hsla(212, 89%, 61%, 0.687); font-size: 12px; font-weight: 600; margin-bottom: 10px;">AI / Desktop</span>
                             <h2 class="projects__title"> Language Assistant</h2>
                             <p class="projects__description">
                                 Our project is a Desktop Application that helps children learn the English language through several methods:
@@ -842,6 +1010,7 @@
                     
                         <div class="projects__content">
                             <h3 class="projects__subtitle">Parachute simulation (JavaScript)</h3>
+                            <span style="display: inline-block; padding: 6px 10px; border-radius: 999px; background: rgba(58, 127, 255, 0.12); color: hsla(212, 89%, 61%, 0.687); font-size: 12px; font-weight: 600; margin-bottom: 10px;">Web</span>
                             <h2 class="projects__title">Parachute-Adventure-simulation</h2>
                     
                             <p class="projects__description">

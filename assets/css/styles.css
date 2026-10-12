@@ -912,6 +912,14 @@ font-size: 1.25rem;
 
 }
 
+.projects__card--bank-app{
+    order: -2;
+}
+
+.projects__card--bank-web{
+    order: -1;
+}
+
 
 .projects__iamge{
     position: relative;
